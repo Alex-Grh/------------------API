@@ -1,4 +1,4 @@
-let randomPass = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!\"$%&/()=?@~`\\.\';:+=^*_-';
+let randomPass = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!\"$%&/()<=>?@~`\\.\';:+=^*_-#|{}[]';
 let out1 = document.getElementById("out-1");
 
 function passValue(value) {
