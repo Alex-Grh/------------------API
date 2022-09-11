@@ -57,4 +57,32 @@ body {
    border-radius: 5px; 
  }
 
- 
+ input[type="range"]{
+   -webkit-appearance: none;
+   appearance: none;
+   width: 80%;
+   height: 3.0px;
+   margin-top: 75px;
+   background-color: #ffffffbe;
+   border-radius: 3px;
+}
+input[type="range"]::-webkit-slider-thumb{
+   -webkit-appearance: none;
+   appearance: none;
+   height: 15px;
+   width: 15px;
+   background-color: #2f44ff;
+   border-radius: 50%;
+}
+h3{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   display: inline-block;
+   width: 12%;
+   color: #1c1e21;
+   background-color: #ffffff;
+   text-align: center;
+   padding: 6px 0;
+   margin-left: 6%;
+   border-radius: 4px;
+   font-size: 20px;
+}
