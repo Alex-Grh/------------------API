@@ -6,16 +6,19 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Random Password Generator</title>
    <link rel="stylesheet" href="css/style.css">
+ 
 </head>
 <body>
    <div class="block-1">
       <input type="text" id="out-1">
-      <button>
-         <i class="fa fa-random" aria-hidden="true"></i>
+      <button class="btn but-1">
+         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAACOElEQVRIicWXPWgUURSFv5PVBbVUFAwJREUWJCASUtjEJo3NJuIPWFgJ2qRQrEXBwiqCCmotooiFiDZioQgLdqIoIiQq+QHT6KqJEjTHYt7qZt3JTHZnzGkub+a++707b+68O7BCUv3A9iZgAOjJmPMOeCLp4z93bA/Zrjo/VW0PLco4ZPoWWANcBaYyzrgTOA7MAdslzdSyPRhWdTFj4B/ZvhQYBwA6wvXNwY7nBQbGgu2sB7cl24O2e5czp22w7bXAA+CZ7UP/DSxpDjgBFIGbts/aVsI0VqUJHh7jMGF/YvQG2AGcBkq2D0v61TI4vIU3gNVpFhm0HzgFTLQEtl0ArhDV+0ngZYxrATgH9AE/gKOSYqGJYGArsB54KOlCzOI6gHsBOgMMS6okxE0EF4P9mhCjH3gBlCW9T4KmAb8GLgO34xwkzdvuAb5LWkgDhYRykrQgaUTSUwDbXbb7mvjN1qC2B2yP2i42+qUG18v2PuAVUEkIOkJU16W2wLYLts8Dd4B1wBlJ8zG+ArrDsLpU3KRyKgL3gcFwaQLYaTtuz0tAL/Bc0oeWwcAGYE/duJu/GcWpAhxJ8FkaLGna9l7gFlE9jxEd6J9ipkw2bW+WCw7wR7b7gbtEj3EU2CXpZxpAnFK91ZLGgd3AdeALDU1iK0p1OgX4N1LsXVpl0oG0A54OdkuOrG3BTkHz9vYaMJkxtAs4BsxS394GeNn255yaeYfY5Rqv8RdmI9EHI49fmMeLMl0p/QYYlIz15TgRIgAAAABJRU5ErkJggg==">
       </button>
-      <button>
-         <i class="fa fa-files-o" aria-hidden="true"></i>
+      <button class="btn but-2">
+         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABF0lEQVRIieWUsUqDMRSFvyNdpIKgdnQXBBffRXCwOBbxCRzEQXF1UHBwcC19ge59BCc3Ecci2k0Hj8PvFBMw9k9b+A8EwklyP3JvcmFOEoDtA6A3Q2639TPZBHaBu8LANWAfaANg+8T2a2EotrddaWepNCylVsy0vQocZsR5l3Q/NRjoAFcZcZ6ALPDcUt08cKrGuWrb3kusTSQNS4E7QD+x9ghshWZdqX4G1iPjNnWgrht/SfrV+Wx/pA4071Uv3Hd6A24i/hEwAh4Cf1wLWNIYOA592z1gIOk6FxSqeTVuHvg/nevS9ukf965QtdOpwWfkZyn61bLAks4zoUktRI2XbV8U5m2E4AlVLbqFwQAvwOcMOHF9A33xRkGOHvlWAAAAAElFTkSuQmCC">
       </button>
+      <input type="range" id="length-pass" min="6" max="40" value="6" oninput="PasGenerator()">
+      <h3 id="length-val-pass">6</h3>
 
    </div>
 
