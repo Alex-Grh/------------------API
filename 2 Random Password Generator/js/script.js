@@ -11,8 +11,8 @@ function pasGenerator() {
    let elem = '';
 
    for (let i = 0; i < lengthPass; i++) {
-      let randomEl = passValue(randomPass.length);
-      elem += randomPass.charAt(randomEl);
+      let randomElement = passValue(randomPass.length);
+      elem += randomPass.charAt(randomElement);
    }
    out1.value = elem;
 
