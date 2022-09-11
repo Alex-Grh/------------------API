@@ -86,3 +86,27 @@ h3{
    border-radius: 4px;
    font-size: 20px;
 }
+.alert-box{
+   visibility: hidden;
+}
+
+.alert-box.active {
+   width: 45%;
+   min-width: 450px;
+   background-color: #c9f8e2cc;
+   padding: 10px 25px;
+   color: #038d4c;
+   position: absolute;
+   transform: translate(-50%, 350%);
+   top: 50%;
+   left: 50%;
+   border-radius: 5px;  
+   box-shadow: 0 5px 10px rgba(20, 25, 70, 0.555);
+   font-size: 20px;
+   margin: 10px 0px;
+   visibility: visible;
+}
+
+::selection {
+color: inherit;
+}
