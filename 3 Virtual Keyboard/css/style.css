@@ -718,7 +718,35 @@ section {
    box-shadow: 0 0 0 2px #00ff62;
 }
 
+/* .key-all.remove{
+animation: keys_animation 0.5s forwards;
+}
+@keyframes keys_animation {
+   0% {
+      background-color: #333;
+      color: #fff;
+   }
+   100% {
+      background-color: #fff;
+      color: #000;
+   }
+} */
+
+
 .caps-lock-active{
    color: var(--active-color);
    background: rgb(73, 67, 67);
+}
+
+.i-11{
+max-width: 1080px;
+width: 100%;
+height: 90px;
+margin-bottom: 30px;
+border: none;
+outline: none;
+font-size: 26px;
+background-color: #f7f7f7;
+padding-left: 10px;
+transition: .2s;
 }
