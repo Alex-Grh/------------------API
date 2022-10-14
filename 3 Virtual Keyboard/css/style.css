@@ -1,0 +1,724 @@
+.container  {
+    width: 100%;
+}
+
+section {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #444;
+}
+
+.block {
+    width: 75px;
+    height: 75px;
+    margin: 25px;
+    border: 2px solid #333;
+}
+
+.active {
+    background: orange;
+}
+
+.hide {
+    display: none;
+}
+
+
+:root {
+   --key-color: linear-gradient(#dbdbdb 25%, #736e7a);
+   --basic-key-width: 55px;
+   --basic-key-height: 55px;
+   --top-key-height: 26px;
+   --top-key-margin: 2px;
+   --key-margin: 3px;
+   --key-border-radius: 3px;
+   --key-angular-radius: 12px;
+   --basic-font-size: 13px;
+   --basic-font-color: #fff;
+   --active-color: #00ffb2;
+}
+
+.keyboard__wrap{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   width: 1140px;
+   height: 350px;
+   background: #00000098;
+   font-size: var(--basic-font-size);
+   color: var(--basic-font-color);
+   border-radius: 10px;
+}
+
+.left__keyboard-section{
+   margin-right: 4px;
+}
+
+.for-section{
+   display: flex;
+   flex-direction: column;
+}
+
+.for-section .top__wrap .top__key:first-child{
+   border-top-left-radius: var(--key-angular-radius);
+}
+
+.for-section .top__wrap .top__key:last-child{
+   border-top-right-radius: var(--key-angular-radius);
+}
+
+.row__wrap{
+   display: flex;
+   flex-direction: row;
+}
+
+.wrap{
+   display: flex;
+   flex-direction: row;
+}
+
+.top__key{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: var(--basic-key-width);
+   height: var(--top-key-height);
+   /* background: var(--key-color); */
+   background: black;
+   margin: var(--top-key-margin);
+   border-radius: var(--key-border-radius);
+   position: relative;
+   box-shadow: 0 0 0 0.5px #00ff62;
+}
+
+.top__key:hover {
+   border: 1px solid #eee;
+   background: #00000015;
+}
+
+.column__wrap{
+   display: flex;
+   flex-direction: column;
+}
+
+.center__key{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: var(--basic-key-width);
+   height: var(--basic-key-height);
+   /* background: var(--key-color); */
+   background: black;
+   margin: var(--key-margin);
+   border-radius: var(--key-border-radius);
+   position: relative;
+   box-shadow: 0 0 0 0.5px #00ff62;
+}
+
+.center__key:hover {
+   border: 1px solid #eee;
+   background: #00000015;
+}
+
+.bottom-row .center__key:first-child{
+   border-bottom-left-radius: var(--key-angular-radius);
+}
+
+.bottom-row .center__key:last-child{
+   border-bottom-right-radius: var(--key-angular-radius);
+}
+
+.for__numpad-wrap{
+   display: flex;
+   flex-direction: row;
+}
+
+.for__numpad{
+   display: flex;
+   flex-direction: column;
+}
+
+.arrow-wrap{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 1px 0px;
+}
+
+.margin{
+   margin: 3px 2px;
+}
+
+.backquote{
+   width: 40px;
+}
+
+.backquote::before{
+   content: '~';
+   position: absolute;
+   left: 5px;
+   top: 0px;
+}
+
+.backquote::after{
+   content: 'Ё';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.digit-1::before{
+   content: '!';
+   position: absolute;
+   top: 5px;
+   left: 10px;
+}
+
+.digit-2::before{
+   content: '@';
+   position: absolute;
+   top: 0px;
+   left: 5px;
+}
+
+.digit-2::after{
+   content: '"';
+   position: absolute;
+   right: 9px;
+   bottom: -3px;
+}
+
+.digit-3::before{
+   content: '#';
+   position: absolute;
+   top: 0px;
+   left: 5px;
+}
+
+.digit-3::after{
+   content: '№';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.digit-4::before{
+   content: '$';
+   position: absolute;
+   top: 0px;
+   left: 5px;
+}
+
+.digit-4::after{
+   content: ';';
+   position: absolute;
+   right: 6px;
+   bottom: 2px;
+}
+
+.digit-5::before{
+   content: '%';
+   position: absolute;
+   top: 0px;
+   left: 5px;
+}
+
+.digit-6::before{
+   content: '^';
+   position: absolute;
+   top: 2px;
+   left: 7px;
+}
+
+.digit-6::after{
+   content: ':';
+   position: absolute;
+   right: 6px;
+   bottom: 2px;
+}
+
+.digit-7::before{
+   content: '&';
+   position: absolute;
+   top: 0px;
+   left: 5px;
+}
+
+.digit-7::after{
+   content: '?';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.digit-8::before{
+   content: '*';
+   position: absolute;
+   top: 2px;
+   left: 7px;
+}
+
+.digit-9::before{
+   content: '(';
+   position: absolute;
+   top: 0px;
+   left: 5px;
+}
+
+.digit-0::before{
+   content: ')';
+   position: absolute;
+   top: 0px;
+   left: 5px;
+}
+
+.minus::before{
+   content: '_';
+   position: absolute;
+   top: -5px;
+   left: 8px;
+}
+
+.equal::before{
+   content: '+';
+   position: absolute;
+   top: 0px;
+   left: 7px;
+}
+
+.backspace{
+   width: 101px;
+}
+
+.tab{
+   width: 70px;
+}
+
+.key-q::before{
+   content: 'Й';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-w::before{
+   content: 'Ц';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-e::before{
+   content: 'У';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-r::before{
+   content: 'К';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-t::before{
+   content: 'Е';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-y::before{
+   content: 'Н';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-u::before{
+   content: 'Г';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-i::before{
+   content: 'Ш';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-o::before{
+   content: 'Щ';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-p::before{
+   content: 'З';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.bracket-left::before{
+   content: '\007B';
+   position: absolute;
+   top: 2px;
+   left: 6px;
+}
+
+.bracket-left::after{
+   content: 'Х';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.bracket-right::before{
+   content: '\007D';
+   position: absolute;
+   top: 2px;
+   left: 6px;
+}
+
+.bracket-right::after{
+   content: 'Ъ';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.backslash{
+   width: 70px;
+}
+
+.backslash::before{
+   content: '|';
+   position: absolute;
+   top: 2px;
+   left: 6px;
+}
+
+.backslash::after{
+   content: '/';
+   position: absolute;
+   top: 0px;
+   right: 6px;
+   font-size: 15px;
+}
+
+.caps-lock{
+   width: 82px;
+}
+
+.key-a::before{
+   content: 'Ф';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-s::before{
+   content: 'Ы';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-d::before{
+   content: 'В';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-f::before{
+   content: 'А';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-g::before{
+   content: 'П';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-h::before{
+   content: 'Р';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-j::before{
+   content: 'О';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-k::before{
+   content: 'Л';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-l::before{
+   content: 'Д';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.semicolon::before{
+   content: ':';
+   font-weight: bold;
+   position: absolute;
+   top: 0px;
+   left: 7px;
+}
+
+.semicolon::after{
+   content: 'Ж';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.quote{
+   padding-top: 6px;
+}
+
+.quote::before{
+   content: '"';
+   position: absolute;
+   top: 2px;
+   left: 7px;
+}
+
+.quote::after{
+   content: 'Э';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.enter{
+   width: 118px;
+}
+
+.shift-left{
+   width: 117px;
+}
+
+.key-z::before{
+   content: 'Я';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-x::before{
+   content: 'Ч';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-c::before{
+   content: 'С';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-v::before{
+   content: 'М';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-b::before{
+   content: 'И';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-n::before{
+   content: 'Т';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.key-m::before{
+   content: 'Ь';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.shift-right{
+   width: 145px;
+}
+
+.comma{
+   padding-bottom: 10px;
+}
+
+.comma::before{
+   content: '<';
+   position: absolute;
+   top: 2px;
+   left: 7px;
+}
+
+.comma::after{
+   content: 'Б';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.period{
+   padding-bottom: 10px;
+}
+
+.period::before{
+   content: '>';
+   position: absolute;
+   top: 2px;
+   left: 7px;
+}
+
+.period::after{
+   content: 'Ю';
+   position: absolute;
+   right: 5px;
+   bottom: 0px;
+}
+
+.slash::before{
+   content: '?';
+   position: absolute;
+   top: 2px;
+   left: 7px;
+}
+
+.slash::after{
+   content: '.';
+   position: absolute;
+   right: 5px;
+   bottom: 2px;
+}
+
+.for__slash::before{
+   content: ',';
+   position: absolute;
+   top: -7px;
+   right: 7px;
+}
+
+.space{
+   width: 330px;
+}
+
+.numpad-7::before{
+   content: 'home';
+   position: absolute;
+   right: 50%;
+   bottom: 2px;
+   transform: translateX(50%);
+}
+
+.numpad-8::before{
+   content: '\2191';
+   position: absolute;
+   right: 50%;
+   bottom: 2px;
+   transform: translateX(50%);
+}
+
+.numpad-9::before{
+   content: 'pg\00A0up';
+   position: absolute;
+   right: 50%;
+   bottom: 2px;
+   transform: translateX(50%);
+}
+
+.numpad-4::before{
+   content: '\2190';
+   position: absolute;
+   right: 50%;
+   bottom: 2px;
+   transform: translateX(50%);
+}
+
+.numpad-6::before{
+   content: '\2192';
+   position: absolute;
+   right: 50%;
+   bottom: 2px;
+   transform: translateX(50%);
+}
+
+.numpad-1::before{
+   content: 'end';
+   position: absolute;
+   right: 50%;
+   bottom: 2px;
+   transform: translateX(50%);
+}
+
+.numpad-2::before{
+   content: '\2193';
+   position: absolute;
+   right: 50%;
+   bottom: 2px;
+   transform: translateX(50%);
+}
+
+.numpad-3::before{
+   content: 'pg\00A0 dn';
+   position: absolute;
+   right: 50%;
+   bottom: 2px;
+   transform: translateX(50%);
+}
+
+.numpad-add{
+   height: 116px;
+}
+
+.numpad-0{
+   width: 114px;
+   border-bottom-left-radius: var(--key-angular-radius);
+}
+
+.numpad-enter{
+   height: 116px;
+   border-bottom-right-radius: var(--key-angular-radius);
+}
+
+.my-active{
+   color: var(--active-color);
+   background: rgb(73, 67, 67); 
+   box-shadow: 0 0 0 2px #00ff62;
+}
+
+.caps-lock-active{
+   color: var(--active-color);
+   background: rgb(73, 67, 67);
+}

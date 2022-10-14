@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Unit 20</title>
+</head>
+
+<body>
+   <div class="container">
+      <h1>Unit 20. События клавиатуры</h1>
+      <section>
+         <p><b>Task 0.</b></p>
+
+         <div> Input 01
+            <input type="text" class="i-01">
+         </div>
+         <br>
+         <div> Input 02
+            <input type="text" class="i-02">
+         </div>
+         <br>
+         <div>
+            <label><input type="checkbox" class="ch-01">CapsLock</label>
+         </div>
+         <br>
+         <div> Input 03
+            <input type="text" class="i-03">
+         </div>
+      </section>
+
+      <section>
+         <p><b>Task 1.</b></p>
+         <p>Дан input .i-1. Напишите функцию t1, которая выводит в .out-1 символ и возвращает его. Во всех
+            последующих задачах - работаем с латиницей и цифрами. </p>
+         <input type="text" class="i-1">
+         <div class="out-1">
+         </div>
+      </section>
+
+      <section>
+         <p><b>Task 2.</b></p>
+         <p>Дан input .i-2. Напишите функцию t2, которая выводит в .out-2 код символа и возвращает его. </p>
+         <input type="text" class="i-2">
+         <div class="out-2">
+         </div>
+      </section>
+
+      <section>
+         <p><b>Task 3.</b></p>
+         <p>Дан input .i-3. Напишите функцию t3, которая выводит на страницу true если введен символ и false если
+            цифра. Для определения - используйте код клавиши. </p>
+         <input type="text" class="i-3">
+         <div class="out-3">
+         </div>
+      </section>
+
+      <section>
+         <p><b>Task 4.</b></p>
+         <p>Дан input .i-4. Напишите функцию t4, которая выводит в .out-4 только символы в нижнем регистре. Т.е.
+            ввели ab4Bci в out получаем ab4bci. </p>
+         <input type="text" class="i-4">
+         <div class="out-4">
+         </div>
+      </section>
+
+      <section>
+         <p><b>Task 5.</b></p>
+         <p>Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы в верхнем регистре.
+            Т.е. пользователь ввел AbCd и функция выведет ABCD. </p>
+         <input type="text" class="i-5">
+         <div class="out-5">
+         </div>
+      </section>
+
+      <section>
+         <p><b>Task 6.</b></p>
+         <p> Дан input .i-6. Напишите функцию t6, которая выводит в .i-6 только символы в нижнем регистре. </p>
+         <div>
+            <input type="text" class="i-6">
+
+            <div class="out-6">
+            </div>
+      </section>
+
+      <section>
+         <p><b>Task 7.</b></p>
+         <p>Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случаный символ из массива a7 при каждом
+            вводе символа.</p>
+         <div>
+
+            <input type="text" class="i-7">
+
+            <div class="out-7">
+            </div>
+      </section>
+
+      <section>
+         <p><b>Task 8.</b></p>
+         <p>Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input текст, но заменяет i на 1,
+            o на 0, l на 7.</p>
+         <div>
+
+            <input type="text" class="i-8">
+            <div class="out-8">
+            </div>
+      </section>
+
+      <section>
+         <p><b>Task 9.</b></p>
+         <p>Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых клавиш стрелка вниз.</p>
+         <div>
+
+            <input type="text" class="i-9">
+            <div class="out-9">
+            </div>
+      </section>
+
+      <section>
+         <p><b>Task 10.</b></p>
+         <p>Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и
+            стрелка влево увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту
+            изображения. Одно нажатие клавиши - 1px.</p>
+         <div>
+            <input type="text" class="i-10">
+            <div class="div-10 block">
+               <img src="img/1.png" alt="">
+            </div>
+            <div class="out-10">
+            </div>
+      </section>
+
+      <section>
+         <p><b>Task 11.</b></p>
+         <p> 1. Выполните в html верстку клавиш клавиатуры. Сверстайте – блок цифровых клавиш от 1 до 0. И ряд клавиш q
+            – p. Добавьте
+            клавишу левый shift, левый alt, левый ctrl, пробел, enter.</p>
+         <p>2. Добавьте на input .i-11 событие onkeypress или onkeyup или onkeydown ( по вашему выбору). Когда событие
+            происходит (
+            ввод символа в input) необходимо подсветить ( добавить класс active) клавише с таким символом. Со всех
+            остальных клавиш
+            – удалить класс active.</p>
+         <p>3. Если вводится следующий символ – повторить удаление active и подсветить клавишу с введенным символом.</p>
+         <p>4. Ограничения проекта – тестируются только указанные клавиши в латинской раскладке. Комбинации клавиш не
+            тестируются.
+            Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем регистре.</p>
+
+         <div>
+
+            <input type="text" class="i-11">
+            <div class="out-11">
+            </div>
+      </section>
+
+      <section>
+         <div class="keyboard__wrap">
+            <div class="left__keyboard-section for-section">
+               <div class="top__wrap row__wrap">
+                  <div class="top__key key-all" data-key="Escape">esc</div>
+                  <div class="top__key key-all" data-key="F1">F1</div>
+                  <div class="top__key key-all" data-key="F2">F2</div>
+                  <div class="top__key key-all" data-key="F3">F3</div>
+                  <div class="top__key key-all" data-key="F4">F4</div>
+                  <div class="top__key key-all" data-key="F5">F5</div>
+                  <div class="top__key key-all" data-key="F6">F6</div>
+                  <div class="top__key key-all" data-key="F7">F7</div>
+                  <div class="top__key key-all" data-key="F8">F8</div>
+                  <div class="top__key key-all" data-key="F9">F9</div>
+                  <div class="top__key key-all" data-key="F10">F10</div>
+                  <div class="top__key key-all" data-key="F11">F11</div>
+                  <div class="top__key key-all" data-key="F12">F12</div>
+                  <div class="top__key key-all" data-key="Insert">ins</div>
+                  <div class="top__key key-all" data-key="Delete">delete</div>
+               </div>
+               <div class="center__wrap column__wrap">
+                  <div class="wrap">
+                     <div class="center__key key-all backquote" data-key="Backquote">`</div>
+                     <div class="center__key key-all digit-1" data-key="Digit1">1</div>
+                     <div class="center__key key-all digit-2" data-key="Digit2">2</div>
+                     <div class="center__key key-all digit-3" data-key="Digit3">3</div>
+                     <div class="center__key key-all digit-4" data-key="Digit4">4</div>
+                     <div class="center__key key-all digit-5" data-key="Digit5">5</div>
+                     <div class="center__key key-all digit-6" data-key="Digit6">6</div>
+                     <div class="center__key key-all digit-7" data-key="Digit7">7</div>
+                     <div class="center__key key-all digit-8" data-key="Digit8">8</div>
+                     <div class="center__key key-all digit-9" data-key="Digit9">9</div>
+                     <div class="center__key key-all digit-0" data-key="Digit0">0</div>
+                     <div class="center__key key-all minus" data-key="Minus">-</div>
+                     <div class="center__key key-all equal" data-key="Equal">=</div>
+                     <div class="center__key key-all backspace" data-key="Backspace">Backspace</div>
+                  </div>
+                  <div class="wrap">
+                     <div class="center__key key-all tab" data-key="Tab">Tab</div>
+                     <div class="center__key key-all key-q" data-key="KeyQ">Q</div>
+                     <div class="center__key key-all key-w" data-key="KeyW">W</div>
+                     <div class="center__key key-all key-e" data-key="KeyE">E</div>
+                     <div class="center__key key-all key-r" data-key="KeyR">R</div>
+                     <div class="center__key key-all key-t" data-key="KeyT">T</div>
+                     <div class="center__key key-all key-y" data-key="KeyY">Y</div>
+                     <div class="center__key key-all key-u" data-key="KeyU">U</div>
+                     <div class="center__key key-all key-i" data-key="KeyI">I</div>
+                     <div class="center__key key-all key-o" data-key="KeyO">O</div>
+                     <div class="center__key key-all key-p" data-key="KeyP">P</div>
+                     <div class="center__key key-all bracket-left" data-key="BracketLeft">[</div>
+                     <div class="center__key key-all bracket-right" data-key="BracketRight">]</div>
+                     <div class="center__key key-all backslash" data-key="Backslash">\</div>
+                  </div>
+                  <div class="wrap">
+                     <div class="center__key key-all caps-lock" data-key="CapsLock">Caps<br>Lock</div>
+                     <div class="center__key key-all key-a" data-key="KeyA">A</div>
+                     <div class="center__key key-all key-s" data-key="KeyS">S</div>
+                     <div class="center__key key-all key-d" data-key="KeyD">D</div>
+                     <div class="center__key key-all key-f" data-key="KeyF">F</div>
+                     <div class="center__key key-all key-g" data-key="KeyG">G</div>
+                     <div class="center__key key-all key-h" data-key="KeyH">H</div>
+                     <div class="center__key key-all key-j" data-key="KeyJ">J</div>
+                     <div class="center__key key-all key-k" data-key="KeyK">K</div>
+                     <div class="center__key key-all key-l" data-key="KeyL">L</div>
+                     <div class="center__key key-all semicolon" data-key="Semicolon">;</div>
+                     <div class="center__key key-all quote" data-key="Quote">'</div>
+                     <div class="center__key key-all enter" data-key="Enter">Enter</div>
+                  </div>
+                  <div class="wrap">
+                     <div class="center__key key-all shift-left" data-key="ShiftLeft">Shift</div>
+                     <div class="center__key key-all key-z" data-key="KeyZ">Z</div>
+                     <div class="center__key key-all key-x" data-key="KeyX">X</div>
+                     <div class="center__key key-all key-c" data-key="KeyC">C</div>
+                     <div class="center__key key-all key-v" data-key="KeyV">V</div>
+                     <div class="center__key key-all key-b" data-key="KeyB">B</div>
+                     <div class="center__key key-all key-n" data-key="KeyN">N</div>
+                     <div class="center__key key-all key-m" data-key="KeyM">M</div>
+                     <div class="center__key key-all comma" data-key="Comma">,</div>
+                     <div class="center__key key-all period" data-key="Period">.</div>
+                     <div class="center__key key-all slash" data-key="Slash">/
+                        <div class="for__slash"></div>
+                     </div>
+                     <div class="center__key key-all shift-right" data-key="ShiftRight">Shift</div>
+                  </div>
+                  <div class="wrap bottom-row">
+                     <div class="center__key key-all" data-key="ControlLeft">Ctrl</div>
+                     <div class="center__key key-all" data-key="fn">fn</div>
+                     <div class="center__key key-all" data-key="MetaLeft">win</div>
+                     <div class="center__key key-all" data-key="AltLeft">Alt</div>
+                     <div class="center__key key-all space" data-key="Space">Space</div>
+                     <div class="center__key key-all" data-key="AltRight">Alt</div>
+                     <div class="center__key key-all" data-key="ControlRight">Ctrl</div>
+                     <div class="center__key key-all" data-key="ArrowLeft">&larr;</div>
+                     <div class="arrow-wrap">
+                        <div class="top__key key-all" data-key="ArrowUp">&uarr;</div>
+                        <div class="top__key key-all" data-key="ArrowDown">&darr;</div>
+                     </div>
+                     <div class="center__key key-all" data-key="ArrowRight">&rarr;</div>
+                  </div>
+               </div>
+            </div>
+            <div class="right__keyboard-section for-section">
+               <div class="top__wrap row__wrap">
+                  <div class="top__key key-all" data-key="Home">home</div>
+                  <div class="top__key key-all" data-key="End">end</div>
+                  <div class="top__key key-all" data-key="PageUp">pg up</div>
+                  <div class="top__key key-all" data-key="PageDown">pg dn</div>
+               </div>
+               <div class="center__wrap column__wrap">
+                  <div class="wrap">
+                     <div class="center__key key-all margin" data-key="NumLock">Num<br>Lock</div>
+                     <div class="center__key key-all margin" data-key="NumpadDivide">/</div>
+                     <div class="center__key key-all margin" data-key="NumpadMultiply">*</div>
+                     <div class="center__key key-all margin" data-key="NumpadSubtract">-</div>
+                  </div>
+                  <div class="for__numpad-wrap">
+                     <div class="for__numpad">
+                        <div class="wrap">
+                           <div class="center__key key-all margin numpad-7" data-key="Numpad7">7</div>
+                           <div class="center__key key-all margin numpad-8" data-key="Numpad8">8</div>
+                           <div class="center__key key-all margin numpad-9" data-key="Numpad9">9</div>
+                        </div>
+                        <div class="wrap">
+                           <div class="center__key key-all margin numpad-4" data-key="Numpad4">4</div>
+                           <div class="center__key key-all margin numpad-5" data-key="Numpad5">5</div>
+                           <div class="center__key key-all margin numpad-6" data-key="Numpad6">6</div>
+                        </div>
+                     </div>
+                     <div class="center__key key-all numpad-add margin" data-key="NumpadAdd">+</div>
+                  </div>
+                  <div class="for__numpad-wrap">
+                     <div class="for__numpad">
+                        <div class="wrap">
+                           <div class="center__key key-all margin numpad-1" data-key="Numpad1">1</div>
+                           <div class="center__key key-all margin numpad-2" data-key="Numpad2">2</div>
+                           <div class="center__key key-all margin numpad-3" data-key="Numpad3">3</div>
+                        </div>
+                        <div class="wrap">
+                           <div class="center__key key-all numpad-0 margin" data-key="Numpad0">0</div>
+                           <div class="center__key key-all margin" data-key="NumpadDecimal">.</div>
+                        </div>
+                     </div>
+                     <div class="center__key key-all numpad-enter margin" data-key="NumpadEnter">Enter</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+
+   <script src="js/script-20.js"></script>
+
+</body>
+
+</html>
