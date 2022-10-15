@@ -173,8 +173,6 @@ shift_btn.addEventListener('click', () => {
      
 });
 
-// keyAll.addEventListener('click', () => {
 keyOperating.forEach(btn => {
    btn.classList.toggle('upper_lowercase');
 }); 
-// });
