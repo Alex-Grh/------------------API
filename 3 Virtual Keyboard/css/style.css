@@ -732,17 +732,14 @@ animation: keys_animation 0.5s forwards;
    }
 } */
 
-.my-active-mouse{
+.my-active-mouse {
    animation: keys_animation 0.5s forwards;
-   /* color: var(--active-color);
-   background: rgb(73, 67, 67); 
-   box-shadow: 0 0 0 2px #00ff62; */
 }
+
 @keyframes keys_animation {
    0% {
-      color: var(--active-color);
-   background: rgb(73, 67, 67); 
-   box-shadow: 0 0 0 2px #00ff62;
+      background-color: #333;
+      color: #fff;
    }
    100% {
       color: var(--active-color);
