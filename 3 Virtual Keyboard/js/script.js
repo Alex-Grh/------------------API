@@ -1,4 +1,5 @@
 let keyAll = document.querySelectorAll('.key-all');
+let keyOperating = document.querySelectorAll('.key-operating');
 const textarea = document.querySelector('textarea');
 
 textarea.onkeydown = function () {
@@ -7,11 +8,11 @@ textarea.onkeydown = function () {
 };
 
 //-----------------------------------------------------------------------------
-textarea.onclick = function () {
-   activeKeyFunk();
-   capsLockFunk();
-};
-textarea.mouseup = activeKeyFunk;
+// textarea.onclick = function () {
+//    activeKeyFunk();
+//    capsLockFunk();
+// };
+// textarea.onclick = activeKeyFunk;
 //-----------------------------------------------------------------------------
 
 textarea.onkeyup = activeKeyFunk;
@@ -54,12 +55,12 @@ function capsLockFunk() {
 // keyAll.forEach(function (element) {
 //    element.onclick = function (event) {
 // keyAll.forEach(function (element) {
-//    element.classList.remove('active');
+//    element.classList.remove('my-active');
 // });
 // let code1 = this.getAttribute('data-key');
-// this.classList.add('active');
+// this.classList.add('my-active');
 // console.log(code1);      
-// document.querySelector('.i-11').value = this.innerHTML; 
+// textarea.value += this.innerHTML; 
 //    }
 // });
 
@@ -100,35 +101,54 @@ if (keys && keyPad && display) {
 */
 //!!!-----------------------------------------------------------------------------
 
-
-// const buttons = document.querySelectorAll('.btn')
-// const textarea = document.querySelector('textarea');
-
 const delete_btn = document.querySelector('.delete');
+const backspace_btn = document.querySelector('.backspace');
 const shift_btn = document.querySelector('.shift');
+const capsLock_btn = document.querySelectorAll('.caps-lock');
 const space_btn = document.querySelector('.space');
 
-let chars = []
+let chars = [];
 
-keyAll.forEach(btn => {
-    btn.addEventListener('click', () => {
-        textarea.value += btn.innerText
-        chars = textarea.value.split('')
-    })
-})
+keyOperating.forEach(btn => {
+   btn.addEventListener('click', () => {
+      textarea.value += btn.innerText;
+      chars = textarea.value.split('');
+      // for (i = 0; i < btn.length; i++) {
+         // let topKeyAttribute = btn[i].getAttribute('data-key');
+         // if (event.code === topKeyAttribute) {
+      btn.classList.toggle('my-active-mouse');
+   // };
+// }
+   });
+});
 
 delete_btn.addEventListener('click', () => {
-    chars.pop()
-    textarea.value = chars.join('')
-})
+   chars.pop();
+   textarea.value = chars.join('');
+});
+
+backspace_btn.addEventListener('click', () => {
+   chars.pop();
+   textarea.value = chars.join('');
+});
 
 space_btn.addEventListener('click', () => {
-    chars.push(' ')
-    textarea.value = chars.join('')
-})
+   chars.push(' ');
+   textarea.value = chars.join('');
+});
 
 shift_btn.addEventListener('click', () => {
-   keyAll.forEach(btn => {
-        btn.classList.toggle('upper')
-    })
-})
+   // keyOperating.forEach(btn => {
+   //    btn.classList.toggle('caps-lock-active');
+   // });
+   keyOperating.forEach(btn => {
+      btn.classList.toggle('upper');
+   });   
+});
+
+shift_btn.addEventListener('click', () => {
+   capsLock_btn.forEach(btn => {
+      btn.classList.toggle('caps-lock-active');
+   });
+     
+});

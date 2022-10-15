@@ -732,6 +732,25 @@ animation: keys_animation 0.5s forwards;
    }
 } */
 
+.my-active-mouse{
+   animation: keys_animation 0.5s forwards;
+   /* color: var(--active-color);
+   background: rgb(73, 67, 67); 
+   box-shadow: 0 0 0 2px #00ff62; */
+}
+@keyframes keys_animation {
+   0% {
+      color: var(--active-color);
+   background: rgb(73, 67, 67); 
+   box-shadow: 0 0 0 2px #00ff62;
+   }
+   100% {
+      color: var(--active-color);
+   background: rgb(73, 67, 67); 
+   box-shadow: 0 0 0 2px #00ff62;
+   }
+} 
+
 
 .caps-lock-active{
    color: var(--active-color);
@@ -796,4 +815,9 @@ textarea {
 }
 
 
-.upper { text-transform: uppercase; }
+.upper { 
+   text-transform: uppercase; 
+   /* color: var(--active-color);
+   background: rgb(73, 67, 67); 
+   box-shadow: 0 0 0 2px #00ff62; */
+}
