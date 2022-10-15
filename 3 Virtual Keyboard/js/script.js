@@ -111,6 +111,8 @@ const backspace_btn = document.querySelector('.backspace');
 const shift_btn = document.querySelector('.shift');
 const capsLock_btn = document.querySelectorAll('.caps-lock');
 const space_btn = document.querySelector('.space');
+const enter1_btn = document.querySelector('.enter-1');
+const enter2_btn = document.querySelector('.enter-2');
 
 let chars = [];
 
@@ -130,7 +132,7 @@ keyAll.forEach(btn => {
       btn.classList.toggle('my-active-mouse');
       setTimeout(function(){
          btn.classList.toggle('my-active-mouse');
-      },500);
+      },200);
    });
 });
 
@@ -149,10 +151,16 @@ space_btn.addEventListener('click', () => {
    textarea.value = chars.join('');
 });
 
+enter1_btn.addEventListener('click', () => {
+   chars.push('\r\n');
+     textarea.value = chars.join('');
+});
+enter2_btn.addEventListener('click', () => {
+   chars.push('\r\n');
+     textarea.value = chars.join('');
+});
+
 shift_btn.addEventListener('click', () => {
-   // keyOperating.forEach(btn => {
-   //    btn.classList.toggle('caps-lock-active');
-   // });
    keyOperating.forEach(btn => {
       btn.classList.toggle('upper_uppercase');
    });   
