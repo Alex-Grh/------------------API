@@ -787,7 +787,7 @@ button {
 .delete,
 .shift,
 .space {
-   font-size: 1rem;
+   /* font-size: 1rem; */
    text-transform: capitalize;
 }
 /* .delete { width: 100px; }
