@@ -31,8 +31,13 @@ let capsLockCount = 0;
 function capsLockFunk() {
    if (event.code === 'CapsLock') {
       capsLockCount++;
+
+      keyOperating.forEach(btn => {
+         btn.classList.toggle('upper_uppercase');
+      }); 
+
       if (capsLockCount % 2 === 1) {
-         document.querySelector('.caps-lock').classList.add('caps-lock-active');
+         document.querySelector('.caps-lock').classList.add('caps-lock-active');        
       } else {
          document.querySelector('.caps-lock').classList.remove('caps-lock-active');
       };
@@ -112,13 +117,20 @@ let chars = [];
 keyOperating.forEach(btn => {
    btn.addEventListener('click', () => {
       textarea.value += btn.innerText;
-      chars = textarea.value.split('');
-      // for (i = 0; i < btn.length; i++) {
-         // let topKeyAttribute = btn[i].getAttribute('data-key');
-         // if (event.code === topKeyAttribute) {
+      chars = textarea.value.split(''); 
+      // btn.style.fontSize = this.value + "px";
+      
+   });
+});
+
+keyAll.forEach(btn => {
+   btn.addEventListener('click', () => {
+      // textarea.value += btn.innerText;
+      // chars = textarea.value.split(''); 
       btn.classList.toggle('my-active-mouse');
-   // };
-// }
+      setTimeout(function(){
+         btn.classList.toggle('my-active-mouse');
+      },500);
    });
 });
 
@@ -142,7 +154,7 @@ shift_btn.addEventListener('click', () => {
    //    btn.classList.toggle('caps-lock-active');
    // });
    keyOperating.forEach(btn => {
-      btn.classList.toggle('upper');
+      btn.classList.toggle('upper_uppercase');
    });   
 });
 
@@ -152,3 +164,9 @@ shift_btn.addEventListener('click', () => {
    });
      
 });
+
+// keyAll.addEventListener('click', () => {
+keyOperating.forEach(btn => {
+   btn.classList.toggle('upper_lowercase');
+}); 
+// });

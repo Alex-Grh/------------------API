@@ -733,7 +733,7 @@ animation: keys_animation 0.5s forwards;
 } */
 
 .my-active-mouse {
-   animation: keys_animation 0.5s forwards;
+   animation: keys_animation 0.1s forwards;
 }
 
 @keyframes keys_animation {
@@ -810,11 +810,9 @@ textarea {
    border: 2px solid rgb(104, 104, 255);
    border-radius: .5rem;
 }
-
-
-.upper { 
+.upper_lowercase { 
+   text-transform: lowercase; 
+}
+.upper_uppercase { 
    text-transform: uppercase; 
-   /* color: var(--active-color);
-   background: rgb(73, 67, 67); 
-   box-shadow: 0 0 0 2px #00ff62; */
 }
