@@ -1,3 +1,4 @@
+/*
 fetch('http://api.openweathermap.org/data/2.5/weather?id=703448&appid=79f2180f696f74f48844082da9bb130b')
     .then(function (resp) { return resp.json() })
     .then(function (data) {
@@ -11,3 +12,5 @@ fetch('http://api.openweathermap.org/data/2.5/weather?id=703448&appid=79f2180f69
     .catch(function () {
         // catch any errors
     });
+
+    */
