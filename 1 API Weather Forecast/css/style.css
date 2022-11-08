@@ -1,0 +1,99 @@
+/* Иногда требуется установить одновременно один стиль для всех элементов веб-страницы, 
+например, задать шрифт или начертание текста. В этом случае поможет универсальный селектор, 
+который соответствует любому элементу веб-страницы.
+Для обозначения универсального селектора применяется символ звёздочки (*) и в 
+общем случае синтаксис будет следующий.
+//* { Описание правил стиля } */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;700&display=swap');
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+/*
+normal - нормальная жирность
+lighter - светлое начертание
+bold - полужирный
+bolder– жирный
+font-weight: normal; нормальная жирность 
+font-weight:900; жирный 
+*/
+body {
+   background:url('../img/7.jpg');  
+   background-repeat: no-repeat;
+   background-size: cover;
+   overflow: hidden;
+   height: 100vh; 
+   font-family: 'Roboto', sans-serif; 
+   font-weight: 400;
+}
+.block-cont{
+   padding: 20px 70px;
+   color: #fff;
+}
+
+.current-flow {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+.date-case {
+   font-weight: 100;
+}
+.date-case .time-1 {
+   font-size: 70px;
+  
+}
+.date-case #am-pm {
+   font-size: 30px;
+   margin-left: 20px;
+}
+.date-case .date-1{
+   font-size: 30px;
+}
+
+.plase_container-1 {
+   text-align: end;
+}
+
+.plase_container-1 .time_zone-1 {
+   font-size: 30px;
+   font-weight: 100;
+}
+
+.plase_container-1 .current_country {
+   font-size: 12px;
+   font-weight: 700;
+}
+.current-flow .other_data {
+   display: flex;
+   flex-direction: column;
+   background: rgba(24, 24, 27, 0.6);
+   padding: 20px;
+   border-radius: 15px;
+   margin: 10px 0;
+   border: 1px solid #eee;
+}
+
+.current-flow .other_data .weather_item-1 {
+   display: flex;
+justify-content: space-between;
+}
+
+.future_forecast-1 {
+   background: rgba(24, 24, 24, 0.8);
+   padding: 25px;
+   position: fixed;
+   bottom: 0;
+   display: flex;
+   color: white;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+}
+
+.future_forecast-1 .weather_forecast-1{
+   display: flex;
+}
