@@ -94,6 +94,45 @@ justify-content: space-between;
    justify-content: center;
 }
 
+.future_forecast-1 .today-1 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.future_forecast-1 .today-1 .weather_for_day {
+  padding: 5px 15px;
+  background: #3c3c44;
+  border-radius: 45px;
+  text-align: center;
+}
+
+.future_forecast-1 .today-1 .temp-1 {
+   font-size: 18px;
+   padding-top: 15px;
+}
+
 .future_forecast-1 .weather_forecast-1{
    display: flex;
+}
+
+.weather_forecast-1 .weather_forecast_item-1 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 0 10px;
+   border: 1px solid rgba(150, 150, 150, 0.712);
+   border-radius: 10px;
+   padding: 15px;
+}
+
+.weather_forecast-1 .weather_forecast_item-1 .weather_for_day{
+   padding: 5px 15px;
+   background: #3c3c44;
+   border-radius: 50px;
+   text-align: center;
+}
+.weather_forecast-1 .weather_forecast_item-1 .temp-1 {
+   font-weight: 100;
 }
