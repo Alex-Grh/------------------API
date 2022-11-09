@@ -130,9 +130,45 @@ justify-content: space-between;
 .weather_forecast-1 .weather_forecast_item-1 .weather_for_day{
    padding: 5px 15px;
    background: #3c3c44;
-   border-radius: 50px;
+   border-radius: 25px;
    text-align: center;
 }
 .weather_forecast-1 .weather_forecast_item-1 .temp-1 {
    font-weight: 100;
+}
+
+@media only screen and (max-width:730px) {
+   .block-cont{
+      padding: 20px;
+   }
+   .future_forecast-1 {
+      justify-content: start;
+      align-items: none;
+      overflow-y: scroll;
+   }
+   .future_forecast-1.today-1 .temp-1{
+      font-size: 23px;
+   }
+   .date-case .time-1 {
+      font-size: 50px;
+   }
+   .date-case #am-pm {
+      font-size: 20px;
+   }
+   .date-case .date-1 {
+      font-size: 20px;
+   }
+   .plase_container-1 {
+      text-align: end;
+      margin-top: 15px;
+   }
+   .plase_container-1 .time_zone-1 {
+      font-size: 20px;
+   }
+   .current-flow .other_data {
+      padding: 12px;
+   }
+   .current-flow .other_data .weather_item-1 {
+      font-size: 14px;
+   }
 }
