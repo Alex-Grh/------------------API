@@ -39,7 +39,7 @@ setInterval(() => {
    const minutes = time.getMinutes();
    const ampm = hour >= 12 ? 'PM' : 'AM'
 
-   time1.innerHTML = hoursIn12 + ':' + minutes + ' ' + `<span id="am-pm">${ampm}</span>`;
+   time1.innerHTML = (hoursIn12 < 10 ? '0' + hoursIn12 : hoursIn12) + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ' + `<span id="am-pm">${ampm}</span>`;
    date1.innerHTML = days[day] + ', ' + date + ' ' + months[month];
 }, 1000);
 
@@ -60,8 +60,9 @@ function getWeatherData() {
 }
 
 function showWeatherData(data) {
-
    let { humidity, pressure, sunrise, sunset, wind_speed } = data.current;
+   timeZone1.innerHTML = data.timezone;
+   currentCountry.innerHTML = data.lat + 'N ' + data.lon + 'E';
 
    currentItem.innerHTML =
       `<div class="weather_item-1">
@@ -87,5 +88,29 @@ function showWeatherData(data) {
 </div>
 `;
 
-
+   let otherDayForcast1 = '';
+   data.daily.forEach((day, idx1) => {
+      if (idx1 == 0) {
+         currentTemp1.innerHTML = `
+         <div class="today-1" id="current_temp-1">
+         <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" alt="weather icon" class="weather_icon">
+         <div class="other">
+            <div class="weather_for_day">${window.moment(day.dt * 1000).format('ddd')}</div>
+            <div class="temp-1">Nidht - ${day.temp.night}&#176; C</div>
+            <div class="temp-1">Day - ${day.temp.day}&#176; C</div>
+         </div>
+      </div>
+         `
+      } else {
+         otherDayForcast1 += `
+      <div class="weather_forecast_item-1">
+      <div class="weather_for_day">${window.moment(day.dt * 1000).format('ddd')}</div>
+      <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="weather_icon">
+      <div class="temp-1">Nidht - ${day.temp.night}&#176; C</div>
+      <div class="temp-1">Day - ${day.temp.day}&#176; C</div>
+   </div>
+      `
+      }
+   })
+   weatherForecast1.innerHTML = otherDayForcast1;
 } 
