@@ -47,11 +47,11 @@ setInterval(() => {
 getWeatherData()
 function getWeatherData() {
    navigator.geolocation.getCurrentPosition((success) => {
-      // console.log(success);
+      console.log(success);
 
       let { latitude, longitude } = success.coords;
 
-      fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`)
+      fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&id=city_id&appid=${API_KEY}`)
          .then(res => res.json()).then(data => {
             console.log(data);
             showWeatherData(data);
@@ -89,11 +89,71 @@ function showWeatherData(data) {
 `;
 
    let otherDayForcast1 = '';
+   
    data.daily.forEach((day, idx1) => {
+      let iconList = day.weather[0].icon;
+      switch(iconList) {
+         case '01d' : 
+         iconList = `img/01d.png`;
+         break;
+         case '02d' : 
+         iconList = `img/02d.png`;
+         break;
+         case '03d' : 
+         iconList = `img/03d.png`;
+         break;
+         case '04d' : 
+         iconList = `img/04d.png`;
+         break;
+         case '09d' : 
+         iconList = `img/09d.png`;
+         break;
+         case '10d' : 
+         iconList = `img/10d.png`;
+         break;
+         case '11d' : 
+         iconList = `img/11d.png`;
+         break;
+         case '13d' : 
+         iconList = `img/13d.png`;
+         break;
+         case '50d' : 
+         iconList = `img/50d.png`;
+         break;
+         case '01n' : 
+         iconList = `img/01n.png`;
+         break;
+         case '02n' : 
+         iconList = `img/02n.png`;
+         break;
+         case '03n' : 
+         iconList = `img/03n.png`;
+         break;
+         case '04n' : 
+         iconList = `img/04n.png`;
+         break;
+         case '09n' : 
+         iconList = `img/09n.png`;
+         break;
+         case '10n' : 
+         iconList = `img/10n.png`;
+         break;
+         case '11n' : 
+         iconList = `img/11n.png`;
+         break;
+         case '13n' : 
+         iconList = `img/13n.png`;
+         break;
+         case '50n' : 
+         iconList = `img/50n.png`;
+         break;
+         default:
+            iconList = `http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`
+      }
       if (idx1 == 0) {
          currentTemp1.innerHTML = `
          <div class="today-1" id="current_temp-1">
-         <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" alt="weather icon" class="weather_icon">
+         <img src="${iconList}" alt="weather icon" class="weather_icon">
          <div class="other">
             <div class="weather_for_day">${window.moment(day.dt * 1000).format('ddd')}</div>
             <div class="temp-1">Nidht - ${day.temp.night}&#176; C</div>
@@ -105,7 +165,7 @@ function showWeatherData(data) {
          otherDayForcast1 += `
       <div class="weather_forecast_item-1">
       <div class="weather_for_day">${window.moment(day.dt * 1000).format('ddd')}</div>
-      <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="weather_icon">
+      <img src="${iconList}" alt="weather icon" class="weather_icon">
       <div class="temp-1">Nidht - ${day.temp.night}&#176; C</div>
       <div class="temp-1">Day - ${day.temp.day}&#176; C</div>
    </div>
